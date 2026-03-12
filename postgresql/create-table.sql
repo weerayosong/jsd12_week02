@@ -27,7 +27,7 @@ CREATE TABLE Ingredients (
 CREATE TABLE MenuItems (
     item_id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL UNIQUE,
-    description TEXT,
+    description VARCHAR(255),
     price DECIMAL(10, 2) NOT NULL,
     category VARCHAR(50)
 );
