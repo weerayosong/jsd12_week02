@@ -1,0 +1,226 @@
+:root {
+    --blue: #00b2ff;
+    --lightblue: #7bd7ff;
+    --white: #eee;
+    --black: #111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+
+    body {
+        font-size: 1.6rem;
+    }
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: var(--blue);
+    height: 80px;
+
+    .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+
+        .logo {
+            a {
+                color: var(--white);
+                font-size: 3.2rem;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin: 0 20px;
+
+                a {
+                    text-decoration: none;
+                    color: var(--white);
+                }
+            }
+        }
+
+    }
+
+    @media only screen and (max-width: 1280px) {
+        height: auto;
+
+        .nav-wrapper {
+
+            .logo {
+                margin: 0 20px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        height: auto;
+
+        .nav-wrapper {
+            flex-direction: column;
+            padding: 20px 0;
+            height: auto;
+
+            .menu {
+                margin: 20px 0;
+            }
+        }
+    }
+}
+
+.banner {
+    height: 500px;
+    background-color: #7bd7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .banner-info {
+        text-align: center;
+        width: 500px;
+        height: 180px;
+        color: var(--white);
+        /* outline: 1px solid red; */
+
+        h1 {
+            font-size: 4.2rem;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .banner-info {
+            padding: 30px;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.content {
+    padding: 20px;
+
+    .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        .content-grid-item {
+            
+            .content-grid-item-img {
+                background-color: var(--lightblue);
+                height: 300px;             
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--white);
+                font-size: 4.8rem;
+
+            }
+
+            .content-grid-item-text {
+                margin-top: 20px;
+                color: var(--black);
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .content-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .content-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.clients {
+    padding: 20px;
+    background-color: var(--lightblue);
+
+    .clients-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+
+        .clients-grid-item {
+            width: 370px;
+            height: 370px;
+            background-color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+        }
+    }
+
+    @media only screen and (max-width: 1280px) {
+        .clients-grid {
+            grid-template-columns: 1fr;
+
+            .clients-grid-item {
+                width: 100%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .clients-grid {
+            grid-template-columns: 1fr;
+
+            .clients-grid-item {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.cta {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cta-text {
+        width: 570px;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 480px) {
+        .cta-text {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+}
+
+footer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--blue);
+}
